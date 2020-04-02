@@ -1,4 +1,6 @@
-﻿using static System.Console;
+﻿using System.Collections;
+using System.Collections.Generic;
+using static System.Console;
 
 namespace HelloWorld
 {
@@ -6,40 +8,43 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var x = 10;
-            var y = 5;
-            var soma = x + y;
-            var subtrair = x - y;
-            var multiplicar = x * y;
-            var dividir = x / y;
-            var resto = 7 % 3;
 
 
-            //soma = soma + subtrair;
-            soma += subtrair;
-            soma -= subtrair;
-            soma *= subtrair;
-            soma /= subtrair;
-            soma %= subtrair;
-            
+            /* string[] diasSemanas = new string[] { "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab" };
 
+            foreach (string dia in diasSemanas)
+            {
+                WriteLine($"Hoje é {dia}");
+            }
+            */
+            /* Queue fila = new Queue();
+             fila.Enqueue("Gilson");
+             fila.Enqueue("Amanda");
+             fila.Enqueue("Vand");
+             fila.Enqueue("Vinicius");
 
-            WriteLine(soma);
-            WriteLine(subtrair);
-            WriteLine(multiplicar);
-            WriteLine(dividir);
-            WriteLine(resto);
+             foreach(string nome in fila)
+             {
+                 WriteLine($"Nome -> {nome}");
+             }
+             */
 
-            var i = 1;
-            i++;
-            i--;
+            Stack<int> p1 = new Stack<int>();
 
-            ++i;
-            --i;
+            p1.Push(2);
+            p1.Push(3);
+            p1.Push(5);
+            p1.Push(7);
+            p1.Push(11);
+
+            foreach(int num in p1)
+            {
+                WriteLine($"Numero {num}");
+            }
+
+        
 
             ReadKey();
-
         }
-
     }
 }
